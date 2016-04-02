@@ -1,0 +1,9 @@
+VAGRANTFILE_API_VERSION = "2"
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/trusty64"
+  config.vm.network "forwarded_port", guest: 7000, host: 7000, auto_correct: true
+  config.vm.network "forwarded_port", guest: 6379, host: 6379, auto_correct: true
+  config.vm.provision :docker
+  config.vm.provision :docker_compose, yml: "/vagrant/docker-compose.yml", run: "always", rebuild: true
+end

@@ -1,0 +1,8 @@
+dynamodb:
+  build: dynamodb
+  ports:
+    - "7000:7000"
+redis:
+  image: redis:2.8
+  ports:
+    - "6379:6379"
