@@ -5,6 +5,8 @@ This project is my learning curve with Titan Graph database with DynamoDB as a b
 
 It is a `MULTI` model graph database. It consist of user vertices and book vertices. The edges on these vertices define the relationship between the user and the book.
 
+![graph](./img/graph.png)
+
 ### Relationships Edges
 Currently following relationships are defined
 
